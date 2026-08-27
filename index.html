@@ -1,1 +1,616 @@
-<h1>Profil-kevin</h1>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MKI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style (1).css">
+<script src="script (1).js"></script>
+</head>
+<body>
+
+<div class="bg-decor" aria-hidden="true"></div>
+
+<!-- ============== HEADER / NAVBAR ============== -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="#beranda" class="logo">MKI<span>.</span></a>
+
+    <nav class="nav" id="nav">
+      <a href="#beranda" class="nav__link active" data-nav>Beranda</a>
+      <a href="#tentang" class="nav__link" data-nav>Tentang</a>
+      <a href="#portofolio" class="nav__link" data-nav>Portofolio</a>
+      <a href="#kontak" class="nav__link" data-nav>Kontak</a>
+    </nav>
+
+    <a href="#kontak" class="btn btn--primary btn--sm header__cta">Hubungi Saya</a>
+
+    <button class="burger" id="burger" aria-label="Buka menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============== HERO ============== -->
+  <section class="hero" id="beranda">
+    <div class="hero__inner">
+      <div class="hero__text reveal">
+        <p class="tagline"><span class="tagline__line"></span> HALO</p>
+        <h1 class="hero__title">Saya <span>Mochammad Kevin</span>Irwansyah</h1>
+        <p class="hero__desc">
+          Siswa jurusan <strong>Sistem Informasi Jaringan Aplikasi (SIJA)</strong> di SMK Telkom sidoarjo,
+          berpengalaman PKL sebagai Software Developer, siap berkontribusi di dunia industri.
+        </p>
+        <div class="hero__actions">
+          <a href="#portofolio" class="btn btn--ghost">Lihat Portofolio</a>
+        </div>
+        <div class="hero__social">
+          <a href="https://linkedin.com/in/ahmad-fauzan-rpl" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.64h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V21H18v-5.7c0-1.36-.02-3.1-1.9-3.1-1.9 0-2.19 1.48-2.19 3v5.8H10V9Z"/></svg>
+          </a>
+          <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.36a9.86 9.86 0 0 0 4.62 1.15h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.08c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.26-.28.57-.35.76-.35h.55c.18 0 .42-.07.65.5.24.58.82 2 .9 2.14.07.15.12.32.02.51-.09.2-.14.32-.28.49-.14.17-.29.38-.42.51-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.92 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.16-.2.7-.81.89-1.09.18-.28.37-.23.62-.14.26.09 1.64.77 1.92.91.28.14.47.21.54.33.07.12.07.68-.17 1.36Z"/></svg>
+          </a>
+          <a href="mailto:ahmad.fauzan.rpl@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13Zm2.2.5 7.3 5.47a.9.9 0 0 0 1 0L19.8 6H4.2Z"/></svg>
+          </a>
+          <a href="https://github.com/ahmadfauzan" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.4 9.4 0 0 1 5 0c1.9-1.29 2.74-1.02 2.74-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.35 4.68-4.58 4.92.36.32.68.94.68 1.9v2.8c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__photo reveal">
+        <div class="hero__photo-decor"></div>
+        <img src="foto_daki1.jpeg" alt="Foto profil Mochammad Kevin Irwansyah">
+        <span class="hero__badge">SIAP KERJA</span>
+      </div>
+    </div>
+
+    <a href="#tentang" class="scroll-cue">
+      <span>SCROLL</span>
+      <i></i>
+    </a>
+  </section>
+
+  <!-- ============== TENTANG & KEAHLIAN ============== -->
+  <section class="section" id="tentang">
+    <div class="section__inner">
+      <p class="eyebrow reveal">Tentang Saya</p>
+      <h2 class="section__title reveal">Profil &amp; Minat Karier</h2>
+      <p class="section__lead reveal">
+        Siswa kelas XII jurusan Rekayasa Perangkat Lunak dengan pengalaman membangun aplikasi web dan mobile sederhana selama masa PKL.
+        Tertarik pada bidang <strong>Front-End Development</strong> dan <strong>UI/UX Design</strong>, dengan semangat belajar teknologi baru secara mandiri.
+        Terbiasa bekerja dalam tim, disiplin waktu, dan berorientasi pada hasil kerja yang rapi.
+      </p>
+
+      <div class="skills-grid">
+        <div class="skills-block reveal">
+          <h3 class="skills-block__title"><span class="dot dot--red"></span> Hard Skills</h3>
+          <div class="badges">
+            <span class="badge">HTML &amp; CSS</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">PHP &amp; MySQL</span>
+            <span class="badge">Figma (UI/UX)</span>
+            <span class="badge">Git &amp; GitHub</span>
+            <span class="badge">Microsoft Office</span>
+          </div>
+        </div>
+        <div class="skills-block reveal">
+          <h3 class="skills-block__title"><span class="dot dot--outline"></span> Soft Skills</h3>
+          <div class="badges">
+            <span class="badge badge--outline">Kerja Tim</span>
+            <span class="badge badge--outline">Komunikasi</span>
+            <span class="badge badge--outline">Disiplin Waktu</span>
+            <span class="badge badge--outline">Problem Solving</span>
+            <span class="badge badge--outline">Adaptif</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== PENGALAMAN & PORTOFOLIO ============== -->
+  <section class="section section--alt" id="portofolio">
+    <div class="section__inner">
+      <p class="eyebrow reveal">Rekam Jejak</p>
+      <h2 class="section__title reveal">Pengalaman PKL &amp; Portofolio</h2>
+
+      <div class="pkl-box reveal">
+        <div class="pkl-box__head">
+          <h3>Praktik Kerja Lapangan (PKL)</h3>
+          <span class="pill">Jan &ndash; Jun 2026</span>
+        </div>
+        <p class="pkl-box__company">PT Digital Solusi Nusantara &mdash; Divisi Software Development</p>
+        <ul class="pkl-box__list">
+          <li>Membantu membangun 3 halaman landing page perusahaan klien.</li>
+          <li>Melakukan pengujian (testing) dan perbaikan bug pada sistem internal.</li>
+          <li>Berkolaborasi dengan tim menggunakan Git untuk version control.</li>
+        </ul>
+      </div>
+
+      <h3 class="section-sub reveal">Showcase Proyek</h3>
+      <div class="projects">
+        <article class="project reveal">
+          <div class="project__thumb" style="background-image:url('https://placehold.co/400x240/D71920/FFFFFF?text=Toko+Online')"></div>
+          <div class="project__body">
+            <h4>Website Toko Online UMKM</h4>
+            <p>Aplikasi katalog &amp; keranjang belanja sederhana untuk UMKM lokal.</p>
+          </div>
+        </article>
+        <article class="project reveal">
+          <div class="project__thumb" style="background-image:url('https://placehold.co/400x240/7A0C13/FFFFFF?text=Sistem+Absensi')"></div>
+          <div class="project__body">
+            <h4>Sistem Absensi Siswa</h4>
+            <p>Aplikasi absensi berbasis web dengan rekap otomatis untuk sekolah.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== SERTIFIKAT & KONTAK ============== -->
+  <section class="section" id="kontak">
+    <div class="section__inner">
+      <p class="eyebrow reveal">Selangkah Lagi</p>
+      <h2 class="section__title reveal">Sertifikat &amp; Kontak</h2>
+
+      <div class="certs reveal">
+        <div class="cert">
+          <span class="cert__stamp">✔</span>
+          <div>
+            <h4>Uji Kompetensi Keahlian (UKK) SIJA</h4>
+            <p>Lulus dengan predikat Sangat Kompeten, 2026</p>
+          </div>
+        </div>
+        <div class="cert">
+          <span class="cert__stamp">✔</span>
+          <div>
+            <h4>Sertifikat Dasar Pemrograman Web</h4>
+            <p>Diterbitkan oleh Lembaga Sertifikasi Profesi (LSP)</p>
+          </div>
+        </div>
+        <div class="cert">
+          <span class="cert__stamp">✔</span>
+          <div>
+            <h4>Sertifikat Desain UI/UX Dasar</h4>
+            <p>Pelatihan mandiri bersertifikat, 2025</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-sub reveal">Mari Terhubung</h3>
+      <div class="contacts reveal">
+        <a class="contact" href="https://wa.me/6281234567890" target="_blank" rel="noopener">
+          <span class="contact__icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.36a9.86 9.86 0 0 0 4.62 1.15h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.08c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.26-.28.57-.35.76-.35h.55c.18 0 .42-.07.65.5.24.58.82 2 .9 2.14.07.15.12.32.02.51-.09.2-.14.32-.28.49-.14.17-.29.38-.42.51-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.92 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.16-.2.7-.81.89-1.09.18-.28.37-.23.62-.14.26.09 1.64.77 1.92.91.28.14.47.21.54.33.07.12.07.68-.17 1.36Z"/></svg>
+          </span>
+          <span class="contact__text"><strong>WhatsApp</strong><small>+62 831-9919-2390</small></span>
+        </a>
+        <a class="contact" href="mailto:ahmad.fauzan.rpl@gmail.com">
+          <span class="contact__icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13Zm2.2.5 7.3 5.47a.9.9 0 0 0 1 0L19.8 6H4.2Z"/></svg>
+          </span>
+          <span class="contact__text"><strong>Email</strong><small>ahmad.fauzan.rpl@gmail.com</small></span>
+        </a>
+        <a class="contact" href="https://linkedin.com/in/ahmad-fauzan-rpl" target="_blank" rel="noopener">
+          <span class="contact__icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.64h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V21H18v-5.7c0-1.36-.02-3.1-1.9-3.1-1.9 0-2.19 1.48-2.19 3v5.8H10V9Z"/></svg>
+          </span>
+          <span class="contact__text"><strong>LinkedIn</strong><small>linkedin.com/in/ahmad-fauzan-rpl</small></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Mochammad Kevin Irwansyah &mdash; Dibuat dengan semangat siap kerja.</p>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+/* =========================================================
+   TOKEN WARNA & TIPOGRAFI
+   ========================================================= */
+:root{
+  --merah-utama:   #D71920;
+  --merah-gelap:   #7A0C13;
+  --merah-terang:  #FF5B5B;
+  --putih:         #FFFFFF;
+  --abu-latar:     #FAF6F5;
+  --abu-alt:       #F3ECEC;
+  --teks-gelap:    #26161A;
+  --teks-muted:    #7C6265;
+  --garis:         #F0DEDF;
+  --radius-lg: 26px;
+  --radius-md: 16px;
+  --shadow-card: 0 20px 45px -18px rgba(122,12,19,0.22);
+  --ease: cubic-bezier(.65,0,.35,1);
+  --header-h: 68px;
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; scroll-padding-top:var(--header-h); }
+
+body{
+  margin:0;
+  background:var(--putih);
+  color:var(--teks-gelap);
+  font-family:'Inter',system-ui,sans-serif;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{ font-family:'Poppins',sans-serif; margin:0; line-height:1.15; }
+p{ margin:0; }
+img{ max-width:100%; display:block; }
+a{ color:inherit; }
+
+.bg-decor{
+  position:fixed; inset:0; z-index:-1; pointer-events:none;
+  background:
+    radial-gradient(620px 460px at 100% -6%, rgba(215,25,32,.10), transparent 60%),
+    radial-gradient(520px 400px at -8% 40%, rgba(122,12,19,.08), transparent 60%);
+}
+
+/* =========================================================
+   HEADER / NAVBAR
+   ========================================================= */
+.header{
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  height:var(--header-h);
+  display:flex; align-items:center;
+  background:rgba(255,255,255,.7);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid transparent;
+  transition:background .3s var(--ease), border-color .3s var(--ease), box-shadow .3s var(--ease);
+}
+.header.scrolled{
+  background:rgba(255,255,255,.92);
+  border-bottom-color:var(--garis);
+  box-shadow:0 8px 24px -18px rgba(122,12,19,.35);
+}
+.header__inner{
+  width:100%; max-width:1160px; margin:0 auto;
+  padding:0 20px;
+  display:flex; align-items:center; justify-content:space-between;
+  gap:20px;
+}
+.logo{
+  font-family:'Poppins',sans-serif; font-weight:800; font-size:20px;
+  text-decoration:none; color:var(--teks-gelap); flex-shrink:0;
+}
+.logo span{ color:var(--merah-utama); }
+
+.nav{
+  position:fixed; top:var(--header-h); left:0; right:0;
+  background:var(--putih);
+  border-bottom:1px solid var(--garis);
+  flex-direction:column;
+  padding:8px 20px 18px;
+  display:none;
+  gap:2px;
+  box-shadow:0 16px 30px -20px rgba(122,12,19,.3);
+}
+.nav.open{ display:flex; }
+.nav__link{
+  text-decoration:none; font-size:14.5px; font-weight:600;
+  color:var(--teks-muted);
+  padding:12px 4px; border-bottom:1px solid var(--garis);
+  transition:color .25s;
+}
+.nav__link:last-child{ border-bottom:none; }
+.nav__link.active, .nav__link:hover{ color:var(--merah-utama); }
+
+.header__cta{ display:none; }
+
+.burger{
+  width:38px; height:38px; border-radius:10px;
+  border:1px solid var(--garis); background:var(--putih);
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px;
+  cursor:pointer; flex-shrink:0;
+}
+.burger span{
+  width:18px; height:2px; background:var(--teks-gelap); border-radius:2px;
+  transition:transform .3s var(--ease), opacity .3s var(--ease);
+}
+.burger.open span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+.burger.open span:nth-child(2){ opacity:0; }
+.burger.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+/* =========================================================
+   TOMBOL
+   ========================================================= */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  border:none; border-radius:999px;
+  font-family:'Inter',sans-serif; font-weight:700; font-size:14.5px;
+  padding:13px 22px; cursor:pointer; text-decoration:none;
+  transition:transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+.btn--primary{
+  color:var(--putih);
+  background:linear-gradient(135deg,var(--merah-utama),var(--merah-gelap));
+  box-shadow:0 12px 26px -10px rgba(215,25,32,.5);
+}
+.btn--primary:hover{ transform:translateY(-3px); box-shadow:0 16px 30px -10px rgba(215,25,32,.6); }
+.btn--ghost{ background:var(--putih); color:var(--merah-gelap); border:2px solid var(--garis); }
+.btn--ghost:hover{ border-color:var(--merah-utama); color:var(--merah-utama); transform:translateY(-2px); }
+.btn--sm{ padding:10px 18px; font-size:13.5px; }
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{
+  min-height:100vh;
+  display:flex; flex-direction:column; justify-content:center;
+  padding:calc(var(--header-h) + 40px) 20px 60px;
+  position:relative;
+}
+.hero__inner{
+  max-width:1160px; margin:0 auto; width:100%;
+  display:flex; flex-direction:column-reverse; gap:40px;
+  align-items:center;
+}
+.hero__text{ text-align:center; }
+.tagline{
+  display:flex; align-items:center; justify-content:center; gap:10px;
+  font-size:12px; font-weight:700; letter-spacing:.15em;
+  color:var(--merah-utama); margin-bottom:14px;
+}
+.tagline__line{ width:26px; height:2px; background:var(--merah-utama); border-radius:2px; }
+.hero__title{
+  font-size:clamp(28px,8vw,46px); font-weight:800; color:var(--teks-gelap);
+  margin-bottom:16px;
+}
+.hero__title span{ color:var(--merah-utama); }
+.hero__desc{
+  font-size:15px; color:var(--teks-muted); line-height:1.75;
+  max-width:46ch; margin:0 auto 26px;
+}
+.hero__actions{ display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-bottom:26px; }
+.hero__social{ display:flex; gap:14px; justify-content:center; }
+.hero__social a{
+  width:38px; height:38px; border-radius:50%;
+  border:1.5px solid var(--garis);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--teks-muted); transition:all .25s var(--ease);
+}
+.hero__social a:hover{ color:var(--putih); background:var(--merah-utama); border-color:var(--merah-utama); transform:translateY(-3px); }
+
+.hero__photo{
+  position:relative; width:100%; max-width:340px;
+  margin:0 auto;
+}
+.hero__photo img{
+  width:100%; aspect-ratio:4/4.7; object-fit:cover;
+  border-radius:28px;
+  box-shadow:0 30px 60px -24px rgba(38,22,26,.35);
+  position:relative; z-index:2;
+}
+.hero__photo-decor{
+  position:absolute; inset:14px -14px -14px 14px;
+  background:linear-gradient(150deg,var(--merah-utama),var(--merah-gelap));
+  border-radius:28px; z-index:1;
+}
+.hero__badge{
+  position:absolute; bottom:16px; left:50%; transform:translateX(-50%);
+  z-index:3;
+  background:var(--putih); color:var(--merah-gelap);
+  font-size:11px; font-weight:800; letter-spacing:.06em;
+  padding:8px 16px; border-radius:999px;
+  box-shadow:0 10px 22px -8px rgba(38,22,26,.35);
+  border:1.5px solid var(--garis);
+  white-space:nowrap;
+}
+
+.scroll-cue{
+  position:absolute; right:24px; bottom:28px;
+  display:none; flex-direction:column; align-items:center; gap:10px;
+  text-decoration:none; color:var(--teks-muted);
+}
+.scroll-cue span{
+  writing-mode:vertical-rl; font-size:10.5px; font-weight:700; letter-spacing:.2em;
+}
+.scroll-cue i{
+  width:1.5px; height:46px; background:linear-gradient(var(--merah-utama),transparent);
+  display:block; position:relative;
+  animation:cueMove 1.8s var(--ease) infinite;
+}
+@keyframes cueMove{
+  0%{ opacity:.3; transform:scaleY(.4); transform-origin:top; }
+  50%{ opacity:1; transform:scaleY(1); transform-origin:top; }
+  100%{ opacity:.3; transform:scaleY(.4); transform-origin:top; }
+}
+
+/* =========================================================
+   SECTION UMUM
+   ========================================================= */
+.section{ padding:80px 20px; }
+.section--alt{ background:var(--abu-latar); }
+.section__inner{ max-width:900px; margin:0 auto; }
+.eyebrow{ font-size:11.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--merah-utama); margin-bottom:8px; }
+.section__title{ font-size:clamp(24px,6vw,32px); font-weight:800; margin-bottom:16px; }
+.section__lead{ font-size:15px; line-height:1.8; color:var(--teks-muted); max-width:68ch; }
+.section-sub{ font-size:17px; font-weight:700; margin:34px 0 16px; }
+
+/* ---- skills ---- */
+.skills-grid{ display:flex; flex-direction:column; gap:26px; margin-top:34px; }
+.skills-block__title{ font-size:14.5px; font-weight:700; display:flex; align-items:center; gap:8px; margin-bottom:12px; }
+.dot{ width:9px; height:9px; border-radius:50%; display:inline-block; }
+.dot--red{ background:var(--merah-utama); }
+.dot--outline{ background:var(--putih); border:2px solid var(--merah-utama); }
+.badges{ display:flex; flex-wrap:wrap; gap:9px; }
+.badge{
+  font-size:12.5px; font-weight:600; padding:9px 15px; border-radius:999px;
+  background:linear-gradient(135deg,var(--merah-utama),var(--merah-gelap));
+  color:var(--putih); box-shadow:0 6px 14px -6px rgba(215,25,32,.45);
+}
+.badge--outline{ background:var(--putih); color:var(--merah-gelap); border:1.5px solid var(--merah-utama); box-shadow:none; }
+
+/* ---- PKL & proyek ---- */
+.pkl-box{
+  background:var(--putih); border:1px solid var(--garis); border-radius:var(--radius-md);
+  padding:20px 22px; display:flex; flex-direction:column; gap:8px; box-shadow:var(--shadow-card);
+}
+.pkl-box__head{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px; }
+.pkl-box__head h3{ font-size:16px; font-weight:700; }
+.pill{ font-size:11px; font-weight:700; color:var(--merah-gelap); background:var(--abu-latar); border:1px solid var(--merah-utama); padding:4px 10px; border-radius:999px; white-space:nowrap; }
+.pkl-box__company{ font-size:13px; font-weight:600; color:var(--merah-utama); }
+.pkl-box__list{ margin:4px 0 0; padding-left:18px; display:flex; flex-direction:column; gap:5px; }
+.pkl-box__list li{ font-size:13.5px; color:var(--teks-muted); line-height:1.6; }
+
+.projects{ display:flex; flex-direction:column; gap:16px; }
+.project{
+  border-radius:var(--radius-md); overflow:hidden; border:1px solid var(--garis);
+  background:var(--putih); transition:transform .3s var(--ease), box-shadow .3s var(--ease);
+}
+.project:hover{ transform:translateY(-5px); box-shadow:0 18px 34px -16px rgba(122,12,19,.35); }
+.project__thumb{ height:170px; background-size:cover; background-position:center; }
+.project__body{ padding:14px 16px 18px; }
+.project__body h4{ font-size:15px; font-weight:700; margin-bottom:4px; }
+.project__body p{ font-size:12.8px; color:var(--teks-muted); line-height:1.5; }
+
+/* ---- sertifikat & kontak ---- */
+.certs{ display:flex; flex-direction:column; gap:10px; margin-top:26px; }
+.cert{
+  display:flex; align-items:flex-start; gap:12px;
+  background:var(--putih); border:1px solid var(--garis); border-radius:var(--radius-md); padding:14px 16px;
+}
+.cert__stamp{
+  flex-shrink:0; width:27px; height:27px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  background:linear-gradient(145deg,var(--merah-utama),var(--merah-gelap));
+  color:var(--putih); font-size:13px; font-weight:800;
+}
+.cert h4{ font-size:14px; font-weight:700; }
+.cert p{ font-size:12px; color:var(--teks-muted); margin-top:2px; }
+
+.contacts{ display:flex; flex-direction:column; gap:10px; }
+.contact{
+  display:flex; align-items:center; gap:12px; text-decoration:none;
+  padding:14px 16px; border-radius:var(--radius-md); border:1.5px solid var(--garis);
+  color:var(--teks-gelap); transition:all .3s var(--ease); background:var(--putih);
+}
+.contact:hover{ border-color:var(--merah-utama); transform:translateY(-3px); box-shadow:0 14px 26px -16px rgba(122,12,19,.4); }
+.contact__icon{
+  width:38px; height:38px; border-radius:50%; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  background:linear-gradient(145deg,var(--merah-utama),var(--merah-gelap)); color:var(--putih);
+}
+.contact__text{ display:flex; flex-direction:column; gap:1px; }
+.contact__text strong{ font-size:14px; }
+.contact__text small{ font-size:12px; color:var(--teks-muted); }
+
+.footer{ padding:26px 20px 34px; text-align:center; }
+.footer p{ font-size:12.5px; color:var(--teks-muted); }
+
+/* =========================================================
+   ANIMASI SCROLL-REVEAL
+   ========================================================= */
+.reveal{
+  opacity:0; transform:translateY(26px);
+  transition:opacity .7s var(--ease), transform .7s var(--ease);
+}
+.reveal.in-view{ opacity:1; transform:translateY(0); }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (min-width:860px){
+  .header__inner{ padding:0 40px; }
+  .nav{
+    position:static; display:flex; flex-direction:row; padding:0; gap:32px;
+    background:none; border:none; box-shadow:none;
+  }
+  .nav__link{ padding:0; border:none; }
+  .header__cta{ display:inline-flex; }
+  .burger{ display:none; }
+
+  .hero__inner{ flex-direction:row; text-align:left; gap:50px; }
+  .hero__text{ text-align:left; flex:1; }
+  .tagline{ justify-content:flex-start; }
+  .hero__desc{ margin:0 0 30px; }
+  .hero__actions{ justify-content:flex-start; }
+  .hero__social{ justify-content:flex-start; }
+  .hero__photo{ flex:1; max-width:420px; }
+  .scroll-cue{ display:flex; }
+
+  .section{ padding:110px 40px; }
+}
+
+@media (min-width:1080px){
+  .hero__title{ font-size:52px; }
+  .hero__photo{ max-width:460px; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  .reveal, .btn, .project, .contact, .scroll-cue i{ transition:none !important; animation:none !important; }
+  .reveal{ opacity:1; transform:none; }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const header = document.getElementById('header');
+  const burger = document.getElementById('burger');
+  const nav    = document.getElementById('nav');
+  const navLinks = Array.from(document.querySelectorAll('[data-nav]'));
+  const sections  = Array.from(document.querySelectorAll('main section[id]'));
+
+  /* ---------- Header berubah warna saat discroll ---------- */
+  function onScroll(){
+    header.classList.toggle('scrolled', window.scrollY > 10);
+  }
+  window.addEventListener('scroll', onScroll, { passive:true });
+  onScroll();
+
+  /* ---------- Menu mobile (burger) ---------- */
+  burger.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    burger.classList.toggle('open', isOpen);
+    burger.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      burger.classList.remove('open');
+    });
+  });
+
+  /* ---------- Highlight menu aktif sesuai section terlihat ---------- */
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(!entry.isIntersecting) return;
+      const id = entry.target.getAttribute('id');
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+      });
+    });
+  }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+  sections.forEach(section => navObserver.observe(section));
+
+  /* ---------- Animasi reveal saat elemen masuk viewport ---------- */
+  const revealEls = Array.from(document.querySelectorAll('.reveal'));
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if(entry.isIntersecting){
+        setTimeout(() => entry.target.classList.add('in-view'), i * 60);
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealEls.forEach(el => revealObserver.observe(el));
+
+});
