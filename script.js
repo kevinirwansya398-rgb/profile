@@ -1,10 +1,6 @@
-/* =========================================================
-   GALAXY PORTFOLIO — SCRIPT.JS
-   ========================================================= */
-
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ---------- 1. LOADING SCREEN ---------- */
+ 
   const loader = document.getElementById('loader');
   let loaderHidden = false;
 
@@ -20,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setTimeout(hideLoader, 3500);
 
-  /* ---------- 2. INIT AOS (scroll reveal) ---------- */
+  
   if (window.AOS) {
     AOS.init({
       duration: 800,
@@ -30,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------- 3. STARFIELD CANVAS ---------- */
+ 
   const canvas = document.getElementById('stars-canvas');
   const ctx = canvas.getContext('2d');
   let stars = [];
@@ -85,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     createStars();
   });
 
-  /* ---------- 4. PARALLAX NEBULA ---------- */
+  
   const nebulas = document.querySelectorAll('.nebula');
   if (!prefersReducedMotion) {
     window.addEventListener('scroll', () => {
@@ -108,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('mouseleave', () => cursorGlow.classList.remove('active'));
   }
 
-  /* ---------- 6. TYPING EFFECT ---------- */
+  
   const typedEl = document.getElementById('typedText');
   const phrases = ['Web Developer', 'UI/UX Enthusiast', 'Pelajar SIJA', 'Digital Creator'];
   let phraseIndex = 0, charIndex = 0, isDeleting = false;
@@ -137,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   typeLoop();
 
-  /* ---------- 7. NAVBAR GLASSMORPHISM ---------- */
+  
   const navbar = document.getElementById('navbar');
   function handleNavbarScroll() {
     if (navbar) {
@@ -147,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
   handleNavbarScroll();
   window.addEventListener('scroll', handleNavbarScroll, { passive: true });
 
-  /* ---------- 8. HAMBURGER MENU (MOBILE) ---------- */
+  
   const navToggle = document.getElementById('navToggle');
   const navLinksWrap = document.getElementById('navLinks');
 
@@ -167,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------- 9. SCROLL SPY ---------- */
+  
   const sections = document.querySelectorAll('section[id]');
   const navLinkEls = document.querySelectorAll('.nav-link');
 
@@ -184,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sections.forEach(section => spyObserver.observe(section));
 
-  /* ---------- 10. SKILL BAR ANIMATION ---------- */
+  
   const skillFills = document.querySelectorAll('.skill-fill');
   const skillObserver = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
@@ -198,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   skillFills.forEach(fill => skillObserver.observe(fill));
 
-  /* ---------- 11. FORM KONTAK -> WHATSAPP ---------- */
+  
   const WHATSAPP_NUMBER = '6283199192390';
   const contactForm = document.getElementById('contactForm');
   const formNote = document.getElementById('formNote');
