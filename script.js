@@ -6,12 +6,23 @@ document.addEventListener('DOMContentLoaded', () => {
  
   /* ---------- 1. LOADING SCREEN ---------- */
   const loader = document.getElementById('loader');
+  let loaderHidden = false;
+ 
+  function hideLoader() {
+    if (loaderHidden || !loader) return;
+    loaderHidden = true;
+    loader.classList.add('hidden');
+  }
+ 
+  // Jalur normal: sembunyikan setelah semua resource (font, AOS, dll) selesai dimuat
   window.addEventListener('load', () => {
-    // beri jeda singkat supaya animasi loader sempat terlihat
-    setTimeout(() => {
-      loader.classList.add('hidden');
-    }, 900);
+    setTimeout(hideLoader, 900);
   });
+ 
+  // Jaring pengaman: kalau event 'load' lambat/gagal (koneksi CDN lambat,
+  // resource diblokir, dll), loader TETAP hilang maksimal 3.5 detik
+  // supaya pengunjung tidak terjebak layar loading selamanya.
+  setTimeout(hideLoader, 3500);
  
   /* ---------- 2. INIT AOS (scroll reveal) ---------- */
   if (window.AOS) {
@@ -224,4 +235,3 @@ document.addEventListener('DOMContentLoaded', () => {
  
 });
  
-
