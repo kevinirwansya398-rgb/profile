@@ -14,14 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
     loader.classList.add('hidden');
   }
 
-  // Jalur normal: sembunyikan setelah semua resource (font, AOS, dll) selesai dimuat
   window.addEventListener('load', () => {
     setTimeout(hideLoader, 900);
   });
 
-  // Jaring pengaman: kalau event 'load' lambat/gagal (koneksi CDN lambat,
-  // resource diblokir, dll), loader TETAP hilang maksimal 3.5 detik
-  // supaya pengunjung tidak terjebak layar loading selamanya.
   setTimeout(hideLoader, 3500);
 
   /* ---------- 2. INIT AOS (scroll reveal) ---------- */
@@ -34,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------- 3. STARFIELD CANVAS (bintang bergerak perlahan) ---------- */
+  /* ---------- 3. STARFIELD CANVAS ---------- */
   const canvas = document.getElementById('stars-canvas');
   const ctx = canvas.getContext('2d');
   let stars = [];
@@ -69,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
       ctx.fillStyle = `rgba(233, 231, 255, ${star.opacity * (0.5 + twinkle * 0.5)})`;
       ctx.fill();
 
-      // gerak perlahan ke bawah, lalu wrap ke atas
       if (!prefersReducedMotion) {
         star.y += star.speed;
         if (star.y > height) {
@@ -90,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     createStars();
   });
 
-  /* ---------- 4. PARALLAX RINGAN PADA NEBULA SAAT SCROLL ---------- */
+  /* ---------- 4. PARALLAX NEBULA ---------- */
   const nebulas = document.querySelectorAll('.nebula');
   if (!prefersReducedMotion) {
     window.addEventListener('scroll', () => {
@@ -102,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
-  /* ---------- 5. CURSOR GLOW INTERAKTIF (desktop only) ---------- */
+  /* ---------- 5. CURSOR GLOW INTERAKTIF ---------- */
   const cursorGlow = document.getElementById('cursorGlow');
   if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
     document.addEventListener('mousemove', (e) => {
@@ -113,12 +108,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('mouseleave', () => cursorGlow.classList.remove('active'));
   }
 
-  /* ---------- 6. TYPING EFFECT PADA HERO ROLE ---------- */
+  /* ---------- 6. TYPING EFFECT ---------- */
   const typedEl = document.getElementById('typedText');
   const phrases = ['Web Developer', 'UI/UX Enthusiast', 'Pelajar SIJA', 'Digital Creator'];
   let phraseIndex = 0, charIndex = 0, isDeleting = false;
 
   function typeLoop() {
+    if (!typedEl) return;
     const current = phrases[phraseIndex];
 
     if (!isDeleting) {
@@ -141,33 +137,37 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   typeLoop();
 
-  /* ---------- 7. NAVBAR: efek glassmorphism saat scroll ---------- */
+  /* ---------- 7. NAVBAR GLASSMORPHISM ---------- */
   const navbar = document.getElementById('navbar');
   function handleNavbarScroll() {
-    navbar.classList.toggle('scrolled', window.scrollY > 40);
+    if (navbar) {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    }
   }
   handleNavbarScroll();
   window.addEventListener('scroll', handleNavbarScroll, { passive: true });
 
-  /* ---------- 8. HAMBURGER MENU (mobile) ---------- */
+  /* ---------- 8. HAMBURGER MENU (MOBILE) ---------- */
   const navToggle = document.getElementById('navToggle');
   const navLinksWrap = document.getElementById('navLinks');
 
-  navToggle.addEventListener('click', () => {
-    const isOpen = navLinksWrap.classList.toggle('open');
-    navToggle.classList.toggle('open', isOpen);
-    navToggle.setAttribute('aria-expanded', isOpen);
-  });
-
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinksWrap.classList.remove('open');
-      navToggle.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', false);
+  if (navToggle && navLinksWrap) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinksWrap.classList.toggle('open');
+      navToggle.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen);
     });
-  });
 
-  /* ---------- 9. ACTIVE MENU SESUAI SECTION (scroll spy) ---------- */
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinksWrap.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', false);
+      });
+    });
+  }
+
+  /* ---------- 9. SCROLL SPY ---------- */
   const sections = document.querySelectorAll('section[id]');
   const navLinkEls = document.querySelectorAll('.nav-link');
 
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sections.forEach(section => spyObserver.observe(section));
 
-  /* ---------- 10. SKILL BAR ANIMATION SAAT DI-SCROLL ---------- */
+  /* ---------- 10. SKILL BAR ANIMATION ---------- */
   const skillFills = document.querySelectorAll('.skill-fill');
   const skillObserver = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
@@ -198,39 +198,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   skillFills.forEach(fill => skillObserver.observe(fill));
 
-  /* ---------- 11. FORM KONTAK -> KIRIM KE WHATSAPP ---------- */
-  // Ganti nomor di bawah ini jika suatu saat nomor WhatsApp berubah.
+  /* ---------- 11. FORM KONTAK -> WHATSAPP ---------- */
   const WHATSAPP_NUMBER = '6283199192390';
-
   const contactForm = document.getElementById('contactForm');
   const formNote = document.getElementById('formNote');
 
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-    const name = document.getElementById('formName').value.trim();
-    const email = document.getElementById('formEmail').value.trim();
-    const message = document.getElementById('formMessage').value.trim();
+      const name = document.getElementById('formName').value.trim();
+      const email = document.getElementById('formEmail').value.trim();
+      const message = document.getElementById('formMessage').value.trim();
 
-    // Susun pesan yang akan otomatis terisi di kolom chat WhatsApp
-    const waText =
-      `Halo Kevin, saya ${name}.\n` +
-      `Email: ${email}\n\n` +
-      `Pesan:\n${message}`;
+      const waText =
+        `Halo Kevin, saya ${name}.\n` +
+        `Email: ${email}\n\n` +
+        `Pesan:\n${message}`;
 
-    const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
+      const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
 
-    formNote.textContent = 'Membuka WhatsApp...';
-    formNote.classList.add('success');
+      formNote.textContent = 'Membuka WhatsApp...';
+      formNote.classList.add('success');
 
-    // Buka WhatsApp di tab baru, lalu bersihkan form
-    window.open(waUrl, '_blank', 'noopener');
-    contactForm.reset();
+      window.open(waUrl, '_blank', 'noopener');
+      contactForm.reset();
 
-    setTimeout(() => {
-      formNote.textContent = '';
-      formNote.classList.remove('success');
-    }, 4000);
-  });
+      setTimeout(() => {
+        formNote.textContent = '';
+        formNote.classList.remove('success');
+      }, 4000);
+    });
+  }
 
 });
