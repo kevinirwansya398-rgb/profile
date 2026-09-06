@@ -1,354 +1,347 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Mochammad Kevin Irwansyah — Portfolio</title>
-<meta name="description" content="Portfolio pribadi Mochammad Kevin Irwansyah — pelajar SMK Telkom Sidoarjo yang tertarik pada web development, coding, dan desain UI/UX.">
- 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
- 
-<!-- AOS scroll animation library (ringan) -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
- 
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Mochammad Kevin Irwansyah — Portfolio</title>
+  <meta name="description" content="Portfolio pribadi Mochammad Kevin Irwansyah — pelajar SMK Telkom Sidoarjo yang tertarik pada web development, coding, dan desain UI/UX.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- AOS scroll animation library -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
- 
-<!-- ========== LOADING SCREEN ========== -->
-<div id="loader">
-  <div class="loader-orbit">
-    <div class="loader-planet"></div>
-    <div class="loader-ring"></div>
-  </div>
-  <p class="loader-text">memuat galaksi<span class="dots"><span>.</span><span>.</span><span>.</span></span></p>
-</div>
- 
-<!-- ========== BACKGROUND LAYERS ========== -->
-<canvas id="stars-canvas"></canvas>
-<div class="nebula nebula-a"></div>
-<div class="nebula nebula-b"></div>
-<div class="nebula nebula-c"></div>
-<div class="cursor-glow" id="cursorGlow"></div>
- 
-<!-- ========== NAVBAR ========== -->
-<nav id="navbar">
-  <div class="nav-inner">
-    <a href="#home" class="nav-logo">MK<span>.</span></a>
- 
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
-      <li><a href="#about" class="nav-link" data-section="about">About</a></li>
-      <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
-      <li><a href="#portfolio" class="nav-link" data-section="portfolio">Portfolio</a></li>
-      <li><a href="#gallery" class="nav-link" data-section="gallery">Gallery</a></li>
-      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
-    </ul>
- 
-    <button id="navToggle" aria-label="Buka menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
- 
-<!-- ========== HOME / HERO ========== -->
-<section id="home" class="section hero">
-  <div class="hero-inner">
- 
-    <div class="hero-text">
-      <p class="hero-eyebrow" data-aos="fade-up" data-aos-delay="100">Hello, I'm</p>
-      <h1 class="hero-name" data-aos="fade-up" data-aos-delay="200">
-        Mochammad Kevin<br>Irwansyah
-      </h1>
-      <p class="hero-role">
-        <span id="typedText"></span><span class="type-cursor">|</span>
-      </p>
-      <p class="hero-desc" data-aos="fade-up" data-aos-delay="400">
-        Saya adalah seorang pelajar yang tertarik dengan teknologi, web development,
-        desain, dan dunia digital.
-      </p>
-      <div class="hero-btns" data-aos="fade-up" data-aos-delay="500">
-        <a href="#about" class="btn btn-primary">Explore My Profile</a>
-        <a href="#portfolio" class="btn btn-outline">View My Projects</a>
-      </div>
+
+  <!-- ========== LOADING SCREEN ========== -->
+  <div id="loader">
+    <div class="loader-orbit">
+      <div class="loader-planet"></div>
+      <div class="loader-ring"></div>
     </div>
- 
-    <div class="hero-photo" data-aos="fade-left" data-aos-delay="300">
-      <div class="photo-glow"></div>
-      <div class="photo-ring"></div>
-      <div class="photo-frame">
-        <!-- Ganti div di bawah ini dengan: <img src="foto-kamu.jpg" alt="Mochammad Kevin Irwansyah"> -->
-        <div class="photo-placeholder">
-          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="100" cy="80" r="38" fill="url(#pGrad1)"/>
-            <path d="M30 190c0-45 31-75 70-75s70 30 70 75" fill="url(#pGrad2)"/>
-            <defs>
-              <linearGradient id="pGrad1" x1="62" y1="42" x2="138" y2="118" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#a78bfa"/><stop offset="1" stop-color="#6366f1"/>
-              </linearGradient>
-              <linearGradient id="pGrad2" x1="30" y1="115" x2="170" y2="190" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#818cf8"/><stop offset="1" stop-color="#4c1d95"/>
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-      </div>
-      <span class="orbit-dot orbit-dot-1"></span>
-      <span class="orbit-dot orbit-dot-2"></span>
-      <span class="orbit-dot orbit-dot-3"></span>
-    </div>
- 
+    <p class="loader-text">memuat galaksi<span class="dots"><span>.</span><span>.</span><span>.</span></span></p>
   </div>
- 
-  <a href="#about" class="scroll-indicator" aria-label="Scroll ke bawah">
-    <span></span>
-  </a>
-</section>
- 
-<!-- ========== ABOUT ME ========== -->
-<section id="about" class="section about">
-  <div class="section-inner">
-    <div class="section-head" data-aos="fade-up">
-      <p class="section-label">Kenali Saya</p>
-      <h2 class="section-title">About Me</h2>
+
+  <!-- ========== BACKGROUND LAYERS ========== -->
+  <canvas id="stars-canvas"></canvas>
+  <div class="nebula nebula-a"></div>
+  <div class="nebula nebula-b"></div>
+  <div class="nebula nebula-c"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">MK<span>.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#portfolio" class="nav-link" data-section="portfolio">Portfolio</a></li>
+        <li><a href="#gallery" class="nav-link" data-section="gallery">Gallery</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <button id="navToggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
- 
-    <div class="about-grid">
-      <div class="about-card about-main" data-aos="fade-right">
-        <p class="about-text">
-          Saya <strong>Mochammad Kevin Irwansyah</strong>, seorang pelajar di
-          <strong>SMK Telkom Sidoarjo</strong> dengan jurusan
-          <strong>Sistem Informasi Jaringan dan Aplikasi (SIJA)</strong>.
-          Saya senang mengeksplorasi dunia teknologi — mulai dari menulis kode,
-          merancang antarmuka, hingga membangun pengalaman digital yang rapi dan fungsional.
+  </nav>
+
+  <!-- ========== HOME / HERO ========== -->
+  <section id="home" class="section hero">
+    <div class="hero-inner">
+
+      <div class="hero-text">
+        <p class="hero-eyebrow" data-aos="fade-up" data-aos-delay="100">Hello, I'm</p>
+        <h1 class="hero-name" data-aos="fade-up" data-aos-delay="200">
+          Mochammad Kevin<br>Irwansyah
+        </h1>
+        <p class="hero-role">
+          <span id="typedText"></span><span class="type-cursor">|</span>
         </p>
-      </div>
- 
-      <div class="about-mini-cards">
-        <div class="about-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="about-icon">🎓</div>
-          <h3>Sekolah</h3>
-          <p>SMK Telkom Sidoarjo</p>
-        </div>
-        <div class="about-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="about-icon">🧩</div>
-          <h3>Jurusan</h3>
-          <p>SIJA</p>
-        </div>
-        <div class="about-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="about-icon">🚀</div>
-          <h3>Minat</h3>
-          <p>Web Development, Coding, UI/UX, Desain &amp; Teknologi</p>
+        <p class="hero-desc" data-aos="fade-up" data-aos-delay="400">
+          Saya adalah seorang pelajar yang tertarik dengan teknologi, web development,
+          desain, dan dunia digital.
+        </p>
+        <div class="hero-btns" data-aos="fade-up" data-aos-delay="500">
+          <a href="#about" class="btn btn-primary">Explore My Profile</a>
+          <a href="#portfolio" class="btn btn-outline">View My Projects</a>
         </div>
       </div>
-    </div>
-  </div>
-</section>
- 
-<!-- ========== SKILLS ========== -->
-<section id="skills" class="section skills">
-  <div class="section-inner">
-    <div class="section-head" data-aos="fade-up">
-      <p class="section-label">Kemampuan</p>
-      <h2 class="section-title">Skills</h2>
-    </div>
- 
-    <div class="skills-grid">
- 
-      <div class="skill-card" data-aos="fade-up" data-aos-delay="0">
-        <div class="skill-top">
-          <span class="skill-name">HTML</span>
-          <span class="skill-percent">90%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
-      </div>
- 
-      <div class="skill-card" data-aos="fade-up" data-aos-delay="80">
-        <div class="skill-top">
-          <span class="skill-name">CSS</span>
-          <span class="skill-percent">85%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-      </div>
- 
-      <div class="skill-card" data-aos="fade-up" data-aos-delay="160">
-        <div class="skill-top">
-          <span class="skill-name">JavaScript</span>
-          <span class="skill-percent">75%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
-      </div>
- 
-      <div class="skill-card" data-aos="fade-up" data-aos-delay="240">
-        <div class="skill-top">
-          <span class="skill-name">UI/UX Design</span>
-          <span class="skill-percent">80%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
-      </div>
- 
-      <div class="skill-card" data-aos="fade-up" data-aos-delay="320">
-        <div class="skill-top">
-          <span class="skill-name">Figma</span>
-          <span class="skill-percent">78%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
-      </div>
- 
-      <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
-        <div class="skill-top">
-          <span class="skill-name">Web Development</span>
-          <span class="skill-percent">82%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
-      </div>
- 
-    </div>
-  </div>
-</section>
- 
-<!-- ========== PORTFOLIO / PROJECT ========== -->
-<section id="portfolio" class="section portfolio">
-  <div class="section-inner">
-    <div class="section-head" data-aos="fade-up">
-      <p class="section-label">Karya</p>
-      <h2 class="section-title">Portfolio</h2>
-    </div>
- 
-    <div class="project-grid">
- 
-      <article class="project-card" data-aos="fade-up" data-aos-delay="0">
-        <div class="project-thumb">
-          <div class="thumb-fallback thumb-1"></div>
-        </div>
-        <div class="project-body">
-          <h3>Landing Page UMKM</h3>
-          <p>Website landing page untuk produk UMKM lokal dengan desain modern dan responsif.</p>
-          <a href="#" class="project-link">View Project <span>→</span></a>
-        </div>
-      </article>
- 
-      <article class="project-card" data-aos="fade-up" data-aos-delay="120">
-        <div class="project-thumb">
-          <div class="thumb-fallback thumb-2"></div>
-        </div>
-        <div class="project-body">
-          <h3>Dashboard Sekolah</h3>
-          <p>Tampilan dashboard sederhana untuk memantau jadwal dan nilai siswa SIJA.</p>
-          <a href="#" class="project-link">View Project <span>→</span></a>
-        </div>
-      </article>
- 
-      <article class="project-card" data-aos="fade-up" data-aos-delay="240">
-        <div class="project-thumb">
-          <div class="thumb-fallback thumb-3"></div>
-        </div>
-        <div class="project-body">
-          <h3>UI Kit Aplikasi Mobile</h3>
-          <p>Rancangan antarmuka aplikasi mobile bertema minimalis, dibuat menggunakan Figma.</p>
-          <a href="#" class="project-link">View Project <span>→</span></a>
-        </div>
-      </article>
- 
-    </div>
-  </div>
-</section>
- 
-<!-- ========== GALLERY ========== -->
-<section id="gallery" class="section gallery">
-  <div class="section-inner">
-    <div class="section-head" data-aos="fade-up">
-      <p class="section-label">Dokumentasi</p>
-      <h2 class="section-title">Gallery</h2>
-    </div>
- 
-    <div class="gallery-grid">
-      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="0"><div class="gallery-fallback g-1"></div></div>
-      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="80"><div class="gallery-fallback g-2"></div></div>
-      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="160"><div class="gallery-fallback g-3"></div></div>
-      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="240"><div class="gallery-fallback g-4"></div></div>
-      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="320"><div class="gallery-fallback g-5"></div></div>
-      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400"><div class="gallery-fallback g-6"></div></div>
-    </div>
-  </div>
-</section>
- 
-<!-- ========== CONTACT ========== -->
-<section id="contact" class="section contact">
-  <div class="section-inner">
-    <div class="section-head" data-aos="fade-up">
-      <p class="section-label">Hubungi Saya</p>
-      <h2 class="section-title">Contact</h2>
-    </div>
- 
-    <div class="contact-grid">
- 
-      <div class="contact-info" data-aos="fade-right">
-        <a href="https://wa.me/6283199192390" target="_blank" rel="noopener" class="contact-item">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.03h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.14.82.84-3.07-.2-.32a8.2 8.2 0 0 1-1.26-4.32c0-4.54 3.7-8.24 8.27-8.24 2.21 0 4.28.86 5.84 2.42a8.2 8.2 0 0 1 2.42 5.83c0 4.55-3.7 8.24-8.27 8.24zm4.53-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.22-1.45-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.17 1.74 2.66 4.22 3.73.59.25 1.05.4 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.11-.23-.17-.48-.29z"/></svg>
+
+      <div class="hero-photo" data-aos="fade-left" data-aos-delay="300">
+        <div class="photo-glow"></div>
+        <div class="photo-ring"></div>
+        <div class="photo-frame">
+          <div class="photo-placeholder">
+            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="100" cy="80" r="38" fill="url(#pGrad1)"/>
+              <path d="M30 190c0-45 31-75 70-75s70 30 70 75" fill="url(#pGrad2)"/>
+              <defs>
+                <linearGradient id="pGrad1" x1="62" y1="42" x2="138" y2="118" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#a78bfa"/><stop offset="1" stop-color="#6366f1"/>
+                </linearGradient>
+                <linearGradient id="pGrad2" x1="30" y1="115" x2="170" y2="190" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#818cf8"/><stop offset="1" stop-color="#4c1d95"/>
+                </linearGradient>
+              </defs>
+            </svg>
           </div>
-          <div>
-            <span class="contact-label">WhatsApp</span>
-            <span class="contact-value">+62 831-9919-2390</span>
-          </div>
-        </a>
- 
-        <a href="https://instagram.com/" target="_blank" rel="noopener" class="contact-item">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.62c-3.15 0-3.5.01-4.73.07-.97.04-1.5.2-1.85.34-.46.18-.79.4-1.14.75-.35.35-.56.68-.75 1.14-.14.35-.3.88-.34 1.85-.06 1.23-.07 1.58-.07 4.73s.01 3.5.07 4.73c.04.97.2 1.5.34 1.85.18.46.4.79.75 1.14.35.35.68.56 1.14.75.35.14.88.3 1.85.34 1.23.06 1.58.07 4.73.07s3.5-.01 4.73-.07c.97-.04 1.5-.2 1.85-.34.46-.18.79-.4 1.14-.75.35-.35.56-.68.75-1.14.14-.35.3-.88.34-1.85.06-1.23.07-1.58.07-4.73s-.01-3.5-.07-4.73c-.04-.97-.2-1.5-.34-1.85a3.05 3.05 0 0 0-.75-1.14 3.05 3.05 0 0 0-1.14-.75c-.35-.14-.88-.3-1.85-.34-1.23-.06-1.58-.07-4.73-.07zm0 4.13a5.09 5.09 0 1 1 0 10.18 5.09 5.09 0 0 1 0-10.18zm0 8.4a3.31 3.31 0 1 0 0-6.62 3.31 3.31 0 0 0 0 6.62zm6.48-8.6a1.19 1.19 0 1 1-2.38 0 1.19 1.19 0 0 1 2.38 0z"/></svg>
-          </div>
-          <div>
-            <span class="contact-label">Instagram</span>
-            <span class="contact-value">@kevinirwansyah</span>
-          </div>
-        </a>
- 
-        <a href="mailto:kevin@example.com" class="contact-item">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.28.5 7.72 5.79L19.72 6H4.28zM20 8.13l-7.4 5.55a1 1 0 0 1-1.2 0L4 8.13V18h16V8.13z"/></svg>
-          </div>
-          <div>
-            <span class="contact-label">Email</span>
-            <span class="contact-value">kevin@example.com</span>
-          </div>
-        </a>
+        </div>
+        <span class="orbit-dot orbit-dot-1"></span>
+        <span class="orbit-dot orbit-dot-2"></span>
+        <span class="orbit-dot orbit-dot-3"></span>
       </div>
- 
-      <form class="contact-form" id="contactForm" data-aos="fade-left">
-        <div class="form-group">
-          <input type="text" id="formName" name="name" placeholder=" " required>
-          <label for="formName">Nama</label>
-        </div>
-        <div class="form-group">
-          <input type="email" id="formEmail" name="email" placeholder=" " required>
-          <label for="formEmail">Email</label>
-        </div>
-        <div class="form-group">
-          <textarea id="formMessage" name="message" rows="4" placeholder=" " required></textarea>
-          <label for="formMessage">Pesan</label>
-        </div>
-        <button type="submit" class="btn btn-primary btn-full">
-          <span class="btn-text">Kirim Pesan</span>
-        </button>
-        <p class="form-note" id="formNote" aria-live="polite"></p>
-      </form>
- 
+
     </div>
-  </div>
-</section>
- 
-<!-- ========== FOOTER ========== -->
-<footer class="footer">
-  <p>&copy; 2026 Mochammad Kevin Irwansyah. All Rights Reserved.</p>
-</footer>
- 
-<!-- AOS library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
-<script src="script.js"></script>
+
+    <a href="#about" class="scroll-indicator" aria-label="Scroll ke bawah">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ========== ABOUT ME ========== -->
+  <section id="about" class="section about">
+    <div class="section-inner">
+      <div class="section-head" data-aos="fade-up">
+        <p class="section-label">Kenali Saya</p>
+        <h2 class="section-title">About Me</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card about-main" data-aos="fade-right">
+          <p class="about-text">
+            Saya <strong>Mochammad Kevin Irwansyah</strong>, seorang pelajar di
+            <strong>SMK Telkom Sidoarjo</strong> dengan jurusan
+            <strong>Sistem Informasi Jaringan dan Aplikasi (SIJA)</strong>.
+            Saya senang mengeksplorasi dunia teknologi — mulai dari menulis kode,
+            merancang antarmuka, hingga membangun pengalaman digital yang rapi dan fungsional.
+          </p>
+        </div>
+
+        <div class="about-mini-cards">
+          <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="about-icon">🎓</div>
+            <h3>Sekolah</h3>
+            <p>SMK Telkom Sidoarjo</p>
+          </div>
+          <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="about-icon">🧩</div>
+            <h3>Jurusan</h3>
+            <p>SIJA</p>
+          </div>
+          <div class="about-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="about-icon">🚀</div>
+            <h3>Minat</h3>
+            <p>Web Development, Coding, UI/UX, Desain &amp; Teknologi</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section id="skills" class="section skills">
+    <div class="section-inner">
+      <div class="section-head" data-aos="fade-up">
+        <p class="section-label">Kemampuan</p>
+        <h2 class="section-title">Skills</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="skill-top">
+            <span class="skill-name">HTML</span>
+            <span class="skill-percent">90%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        </div>
+
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="skill-top">
+            <span class="skill-name">CSS</span>
+            <span class="skill-percent">85%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+        </div>
+
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="skill-top">
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-percent">75%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+        </div>
+
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="skill-top">
+            <span class="skill-name">UI/UX Design</span>
+            <span class="skill-percent">80%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        </div>
+
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="320">
+          <div class="skill-top">
+            <span class="skill-name">Figma</span>
+            <span class="skill-percent">78%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+        </div>
+
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="skill-top">
+            <span class="skill-name">Web Development</span>
+            <span class="skill-percent">82%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PORTFOLIO / PROJECT ========== -->
+  <section id="portfolio" class="section portfolio">
+    <div class="section-inner">
+      <div class="section-head" data-aos="fade-up">
+        <p class="section-label">Karya</p>
+        <h2 class="section-title">Portfolio</h2>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-thumb">
+            <div class="thumb-fallback thumb-1"></div>
+          </div>
+          <div class="project-body">
+            <h3>Landing Page UMKM</h3>
+            <p>Website landing page untuk produk UMKM lokal dengan desain modern dan responsif.</p>
+            <a href="#" class="project-link">View Project <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-aos="fade-up" data-aos-delay="120">
+          <div class="project-thumb">
+            <div class="thumb-fallback thumb-2"></div>
+          </div>
+          <div class="project-body">
+            <h3>Dashboard Sekolah</h3>
+            <p>Tampilan dashboard sederhana untuk memantau jadwal dan nilai siswa SIJA.</p>
+            <a href="#" class="project-link">View Project <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="project-thumb">
+            <div class="thumb-fallback thumb-3"></div>
+          </div>
+          <div class="project-body">
+            <h3>UI Kit Aplikasi Mobile</h3>
+            <p>Rancangan antarmuka aplikasi mobile bertema minimalis, dibuat menggunakan Figma.</p>
+            <a href="#" class="project-link">View Project <span>→</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY ========== -->
+  <section id="gallery" class="section gallery">
+    <div class="section-inner">
+      <div class="section-head" data-aos="fade-up">
+        <p class="section-label">Dokumentasi</p>
+        <h2 class="section-title">Gallery</h2>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="0"><div class="gallery-fallback g-1"></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="80"><div class="gallery-fallback g-2"></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="160"><div class="gallery-fallback g-3"></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="240"><div class="gallery-fallback g-4"></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="320"><div class="gallery-fallback g-5"></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400"><div class="gallery-fallback g-6"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="section contact">
+    <div class="section-inner">
+      <div class="section-head" data-aos="fade-up">
+        <p class="section-label">Hubungi Saya</p>
+        <h2 class="section-title">Contact</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right">
+          <a href="https://wa.me/6283199192390" target="_blank" rel="noopener" class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.03h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.14.82.84-3.07-.2-.32a8.2 8.2 0 0 1-1.26-4.32c0-4.54 3.7-8.24 8.27-8.24 2.21 0 4.28.86 5.84 2.42a8.2 8.2 0 0 1 2.42 5.83c0 4.55-3.7 8.24-8.27 8.24zm4.53-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.22-1.45-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.17 1.74 2.66 4.22 3.73.59.25 1.05.4 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.11-.23-.17-.48-.29z"/></svg>
+            </div>
+            <div>
+              <span class="contact-label">WhatsApp</span>
+              <span class="contact-value">+62 831-9919-2390</span>
+            </div>
+          </a>
+
+          <a href="https://instagram.com/" target="_blank" rel="noopener" class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.62c-3.15 0-3.5.01-4.73.07-.97.04-1.5.2-1.85.34-.46.18-.79.4-1.14.75-.35.35-.56.68-.75 1.14-.14.35-.3.88-.34 1.85-.06 1.23-.07 1.58-.07 4.73s.01 3.5.07 4.73c.04.97.2 1.5.34 1.85.18.46.4.79.75 1.14.35.35.68.56 1.14.75.35.14.88.3 1.85.34 1.23.06 1.58.07 4.73.07s3.5-.01 4.73-.07c.97-.04 1.5-.2 1.85-.34.46-.18.79-.4 1.14-.75.35-.35.56-.68.75-1.14.14-.35.3-.88.34-1.85.06-1.23.07-1.58.07-4.73s-.01-3.5-.07-4.73c-.04-.97-.2-1.5-.34-1.85a3.05 3.05 0 0 0-.75-1.14 3.05 3.05 0 0 0-1.14-.75c-.35-.14-.88-.3-1.85-.34-1.23-.06-1.58-.07-4.73-.07zm0 4.13a5.09 5.09 0 1 1 0 10.18 5.09 5.09 0 0 1 0-10.18zm0 8.4a3.31 3.31 0 1 0 0-6.62 3.31 3.31 0 0 0 0 6.62zm6.48-8.6a1.19 1.19 0 1 1-2.38 0 1.19 1.19 0 0 1 2.38 0z"/></svg>
+            </div>
+            <div>
+              <span class="contact-label">Instagram</span>
+              <span class="contact-value">@kevinirwansyah</span>
+            </div>
+          </a>
+
+          <a href="mailto:kevin@example.com" class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.28.5 7.72 5.79L19.72 6H4.28zM20 8.13l-7.4 5.55a1 1 0 0 1-1.2 0L4 8.13V18h16V8.13z"/></svg>
+            </div>
+            <div>
+              <span class="contact-label">Email</span>
+              <span class="contact-value">kevin@example.com</span>
+            </div>
+          </a>
+        </div>
+
+        <form class="contact-form" id="contactForm" data-aos="fade-left">
+          <div class="form-group">
+            <input type="text" id="formName" name="name" placeholder=" " required>
+            <label for="formName">Nama</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="formEmail" name="email" placeholder=" " required>
+            <label for="formEmail">Email</label>
+          </div>
+          <div class="form-group">
+            <textarea id="formMessage" name="message" rows="4" placeholder=" " required></textarea>
+            <label for="formMessage">Pesan</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span class="btn-text">Kirim Pesan</span>
+          </button>
+          <p class="form-note" id="formNote" aria-live="polite"></p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <p>&copy; 2026 Mochammad Kevin Irwansyah. All Rights Reserved.</p>
+  </footer>
+
+  <!-- AOS library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
- 
